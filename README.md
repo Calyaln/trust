@@ -1,6 +1,6 @@
 # Trust
 
-An app for those who want a safe environement by finding right gynecologist based on friends recommandation.
+An app for those who want a safe environment to find the right gynecologist based on friends recommandations.
 
 ### `Features`
 

@@ -1,9 +1,15 @@
-var express = require("express");
-var router = express.Router();
+const mongoose = require("mongoose");
 
-/* GET users listing. */
-router.get("/", function (req, res, next) {
-  res.send("respond with a resource");
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
 });
 
-module.exports = router;
+mongoose.connection.on("connected", () =>
+  console.log("yay mongodb connected :)")
+);
+
+mongoose.connection.on("error", () =>
+  console.log("nay db connection error :(")
+);

@@ -16,11 +16,12 @@ const physicainSchema = new Schema(
     phone: { type: String, required: true },
     price: { type: String, required: true },
     schedule: { type: String, required: true },
-    socials: { type: String, required: true }, // checked
-    type: { type: String, required: true }, // checked
-    tags: { type: String, required: true }, // checked
-    badges: { type: String, required: true }, // checked
+    socials: { type: String, required: true },
+    type: { type: String, required: true },
+    tags: { type: String, required: true },
+    badges: { type: String, required: true },
     comments: { type: String, required: true },
+    userId: { type: Schema.Types.ObjectId, ref: "user", required: true },
   },
   { timestamps: true }
 );
